@@ -1,0 +1,174 @@
+<%
+    String msg="";
+    String st=request.getParameter("lg");
+    if(st!=null && st.equals("true"))
+    {
+        msg="Succesfully !";
+    }
+    if(st!=null && st.equals("false"))
+    {
+        msg=" Failed !";
+    }
+    
+%>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Finance Business - Contact Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <div class="sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-xs-12">
+            <ul class="left-info">
+              <li><a href="#"><i class="fa fa-phone"></i>7447064331</a></li>
+              <li><a href="#"><i class="fa fa-mail-forward"></i>iotacro@gmail.com</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="right-icons">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>QUIZZ</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.jsp">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="about.jsp">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="contact.jsp">Contact Us</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="re.jsp">Register/Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Test Your Skills By Login</h1>
+            <span>Login Here</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div id="login-box">
+      <div class="left-box">
+        <h1> Login</h1><br>
+        <form action="loginuser" method="post">
+            
+            <input type="text" name="email" placeholder="Email" required=""/>
+            <input type="password" name="pass" placeholder="Password" required=""/>
+            
+            
+          <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="signup-button" value="Sign Up"/>
+          
+          
+          
+          
+          
+         
+          
+          
+        </form>
+        </div>
+        <div class="right-box">
+          <span class="signinwith">Sign in with<br/>Social Network     </span>
+        
+        <button class="social facebook">Sign in with Facebook</button>    
+        <button class="social twitter">Sign in with Twitter</button> 
+        <button class="social google">Sign in with Google+</button> 
+        <a href="login.jsp"><button class="social alert-dark">Create New Account </button></a>
+            
+        
+        </div>
+        <div class="o">OR</div>
+    </div>
+
+
+    
+    
+
+<br><br><br>
+<%@include file="blocks/footer.jsp" %>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+  </body>
+</html>
