@@ -1,0 +1,118 @@
+body {
+    background-color:#f0f0f0;
+ } 
+#img-holder {
+    position:relative;
+    min-height:150px;
+ }
+#mask,#pic {
+    position:absolute;
+    z-index:1;
+    left:0;
+    right:0;
+    margin:auto;
+    width:216px;
+    padding:4px;
+    border:1px solid #006000;
+    background-color:#fff;
+    box-shadow:5px 5px 5px #666;
+    outline:0;
+    cursor:pointer;
+ }
+#mask {
+    z-index:3;
+    width:226px;
+    height:143px;
+    padding:0;
+    border:0;
+    background-color:transparent;
+    box-shadow:none;
+ }
+#mask:focus~#pic  {
+    -webkit-animation:newsize 5s forwards;
+    animation:newsize 5s forwards;
+ }
+#mask:focus{
+    -webkit-animation:masksize 5s forwards;
+    animation:masksize 5s forwards;
+ }
+#pic:focus  {
+    -webkit-animation:oldsize 5s forwards;
+    animation:oldsize 5s forwards;
+ }
+@-webkit-keyframes newsize {
+  from {
+    width:216px;
+    padding:4px;
+    border:1px solid #006000;
+    box-shadow:5px 5px 5px #666;
+  }
+  to {
+    width:648px;
+    padding:12px;
+    border:3px solid #006000;
+    box-shadow:15px 15px 15px #666;	
+  }
+ }
+@keyframes newsize {
+  from {
+    width:216px;
+    padding:4px;
+    border:1px solid #006000;
+    box-shadow:5px 5px 5px #666;
+  }
+  to {
+    width:648px;
+    padding:12px;
+    border:3px solid #006000;
+    box-shadow:15px 15px 15px #666;	
+  }
+ }
+@-webkit-keyframes masksize {
+  from {
+    width:226px;
+    height:143px;	
+  }
+  to {
+    width:0;
+    height:0;
+  }
+ }
+@keyframes masksize {
+  from {
+    width:226px;
+    height:143px;	
+  }
+  to {
+    width:0;
+    height:0;
+  }
+ }
+@-webkit-keyframes oldsize {
+  from {
+    width:648px;
+    padding:12px;
+    border:3px solid #006000;
+    box-shadow:15px 15px 15px #666;	
+  }
+  to {
+    width:216px;
+    padding:4px;
+    border:1px solid #006000;
+    box-shadow:5px 5px 5px #666;
+  }
+ }
+@keyframes oldsize {
+  from {
+    width:648px;
+    padding:12px;
+    border:3px solid #006000;
+    box-shadow:15px 15px 15px #666;	
+  }
+  to {
+    width:216px;
+    padding:4px;
+    border:1px solid #006000;
+    box-shadow:5px 5px 5px #666;
+  }
+ }
